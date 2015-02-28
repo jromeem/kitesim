@@ -38,7 +38,7 @@
         // a new user has come online
         // create a cursor for them
         if (!(data.id in clients)) {
-            cursors[data.id] = $('<div class="cursors">').appendTo('#cursors');
+            cursors[data.id] = $('<div class="cursor">').appendTo('#cursors');
         }
 
         // move the mouse pointer
