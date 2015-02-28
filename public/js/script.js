@@ -19,6 +19,10 @@
             draw();
     } resizeCanvas();
 
+    // hiding your cursor
+    $("body").css('cursor', 'url(../img/kite.png),auto');
+
+
     /////////////////
     // socket shit //
     /////////////////

@@ -3,7 +3,7 @@
 /* to remove the top and left whitespace */
 * { margin:0; padding:0; }
 /* just to be sure these are full screen*/
-html, body { width:100%; height:100%; } 
+html, body { width: 100%; height: 100%; } 
 
 #cursors {
     position:relative;
@@ -11,9 +11,9 @@ html, body { width:100%; height:100%; }
 
 #cursors .cursor {
     position: absolute;
-    width: 15px;
-    height: 22px;
-    background:url('../img/pointer.png') no-repeat -4px 0;
+    width: 50px;
+    height: 50px;
+    background:url('../img/kite.png') no-repeat -4px 0;
 }
 
 /* To remove the scrollbars */
