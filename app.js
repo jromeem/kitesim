@@ -16,8 +16,15 @@ app.get('/', function(req, res){
 });
 
 // new io connection found
-io.on('connection', function(socket){
+io.on('connection', function (socket) {
     console.log('-- NEW USER CONNECTED --');
+    // user is flying a kite!! :D
+    socket.on('mousemove', function (data) {
+        console.log('user move:', data);
+        // this line sends the event (broadcasts it)
+        // to everyone except the originating client.
+        socket.broadcast.emit('moving', data);
+    });
 })
 
 // listener
