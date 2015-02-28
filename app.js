@@ -1,14 +1,28 @@
 
-var app = require('express')();
-var http = require('http').Server(app);
+// initialize app
+var express = require('express');
+var app = express();
 
+// all includes
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// app config -- using assets
+app.use(express.static(__dirname + '/public'));
+
+// router
 app.get('/', function(req, res){
-    // res.send('Hello World!');
-    res.sendFile(__dirname + 'index.html');
+    res.sendFile(__dirname + '/index.html');
+});
+
+// new io connection found
+io.on('connection', function(socket){
+    console.log('-- NEW USER CONNECTED --');
 })
 
+// listener
 http.listen(8080, function(){
-    console.log('\nwow. node server starting ');
+    console.log('wow. node server starting 💻');
     console.log('✨ ~   http://localhost:8080/  ~✨\n');
     console.log("~🎵 Let's go fly a kite 🎵");
-})
+});
