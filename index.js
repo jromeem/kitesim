@@ -10,6 +10,9 @@ var io = require('socket.io')(http);
 // app config -- using assets
 app.use(express.static(__dirname + '/public'));
 
+// wharburg
+app.set('port', (process.env.PORT || 5000))
+
 // router
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
@@ -28,8 +31,8 @@ io.on('connection', function (socket) {
 })
 
 // listener
-http.listen(8080, function(){
+http.listen(app.get('port'), function(){
     console.log('wow. node server starting 💻');
-    console.log('✨ ~   http://localhost:8080/  ~✨\n');
-    console.log("~🎵 Let's go fly a kite 🎵");
+    console.log('✨ ~   http://localhost:5000/  ~✨\n');
+    console.log("\n~🎵 Let's go fly a kite 🎵\n");
 });
