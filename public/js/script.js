@@ -18,7 +18,11 @@
             $canvas[0].height = window.innerHeight;
             draw();
     } resizeCanvas();
-    
+
+    /////////////////
+    // socket shit //
+    /////////////////
+
     // shh listening 👀👂))
     var socket = io();
 
