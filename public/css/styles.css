@@ -19,7 +19,7 @@ html, body { width: 100%; height: 100%; }
 /* To remove the scrollbars */
 canvas { display:block; } 
 canvas {
-    background:url('../img/zilker.jpg')
-    repeat #e4e4e4;
-    overflow: hidden;
+    background:url('../img/zilker.jpg');
+    background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
