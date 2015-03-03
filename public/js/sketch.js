@@ -65,13 +65,12 @@ var sketch = function(p) {
     };
 
     p.draw = function() {
-        // console.log('clients', clients);
-
         p.background(bg);
         yourKite.displaySelf();
-        for (var ident = clients.length - 1; ident >= 0; ident--) {
-            cursors[ident.id].display();
-        };
+        for (ident in clients) {
+            console.log(cursors[ident])
+            cursors[ident].display();
+        }
 
     };
 
@@ -79,10 +78,10 @@ var sketch = function(p) {
     function Kite(x, y) {
         this.x = x;
         this.y = y;
-        this.diameter = Math.random(10, 30);
+        this.diameter = 50;
 
         this.display = function() {
-            p.ellipse(this.x, this.y, this.diameter, this.diameter);
+            p.ellipse(this.x, this.y, 50, 50);
         }
 
         this.displaySelf = function() {
