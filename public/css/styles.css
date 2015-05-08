@@ -13,13 +13,13 @@ html, body { width: 100%; height: 100%; }
     position: absolute;
     width: 50px;
     height: 50px;
-    background:url('../img/kite.png') no-repeat -4px 0;
+    /*background:url('../img/kite.png') no-repeat -4px 0;*/
 }
 
 /* To remove the scrollbars */
 canvas { display:block; } 
 canvas {
-    background:url('../img/zilker.jpg');
-    background-size: 100% 100%;
-	background-repeat: no-repeat;
+    /*background:url('../img/zilker.jpg');*/
+    /*background-size: 100% 100%;*/
+	/*background-repeat: no-repeat;*/
 }
